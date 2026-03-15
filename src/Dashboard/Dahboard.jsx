@@ -5,8 +5,7 @@ import DashboardContent from "./DashboardContent.jsx";
 import { InventoryReminder } from "./InventoryReminder.jsx";
 import { FaChartBar, FaGem, FaUsers, FaBell } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import {api} from "../api.js"
-import axios from "axios";
+import { api } from "../api.js";
 export default function Dashboard() {
   const [phone, setPhone] = useState(null);
   const [verifyPhone, setVerifyPhone] = useState(null);
@@ -73,7 +72,9 @@ export default function Dashboard() {
   };
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-6 text-black">Jewellery Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-6 text-black">
+        Jewellery Dashboard
+      </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2">
         <Card title="Total Products" value={stats.products} icon={<FaGem />} />

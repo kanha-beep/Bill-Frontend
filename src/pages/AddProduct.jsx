@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {api} from "../api.js";
+import { api } from "../api.js";
 import { useNavigate } from "react-router-dom";
 export default function AddProduct() {
   const navigate = useNavigate();
@@ -99,7 +99,7 @@ export default function AddProduct() {
         className="border p-2 w-full"
       />
       <input
-      type="file"
+        type="file"
         name="image"
         placeholder="Select Image"
         onChange={handleImage}
