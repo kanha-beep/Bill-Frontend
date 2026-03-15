@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {api} from "../api.js";
+import { api } from "../api.js";
 
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
@@ -7,7 +7,7 @@ export default function AllProducts() {
   useEffect(() => {
     const loadProducts = async () => {
       const res = await api.get("/api/items");
-      console.log("got: ", res?.data)
+      console.log("got: ", res?.data);
       setProducts(res?.data?.products || []);
     };
     loadProducts();
