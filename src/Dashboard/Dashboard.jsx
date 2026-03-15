@@ -108,7 +108,7 @@ export default function Dashboard() {
             onChange={(e) => setPhone(e.target.value)}
             name="phone"
           />
-          <button type="submit">Generate</button>
+          <button type="submit" className="text-white">Generate</button>
         </form>
         <form onSubmit={handleVerifyOTP}>
           <input
@@ -123,7 +123,7 @@ export default function Dashboard() {
             onChange={(e) => setOtp(e.target.value)}
             name="otp"
           />
-          <button>Verify</button>
+          <button className="text-white">Verify</button>
         </form>
       </h3>
       <hr />

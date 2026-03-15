@@ -61,7 +61,7 @@ export default function BillSystem() {
           value={qty}
           onChange={(e) => setQty(e.target.value)}
         />
-        <button type="submit">Add</button>
+        <button type="submit" className="text-white">Add</button>
       </form>
 
       <hr />
@@ -88,7 +88,7 @@ export default function BillSystem() {
       </table>
 
       {/* <h3>Grand Total: ₹{grandTotal}</h3> */}
-      <button type="submit" onClick={handleCreateBill}>
+      <button type="submit" onClick={handleCreateBill} className="text-white">
         Create
       </button>
       {showBill && <Bill/>}
