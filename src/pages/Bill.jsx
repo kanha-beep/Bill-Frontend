@@ -13,8 +13,8 @@ export default function Bill() {
     `₹${n.toLocaleString("en-IN", { minimumFractionDigits: 2 })}`;
 
   return (
-    <div className="min-h-screen bg-black flex justify-center p-6">
-      <div className="w-[800px] bg-gray-100 text-gray-900 p-10">
+    <div className="min-h-screen bg-gray-100 flex justify-center p-6">
+      <div className="w-[800px] bg-white text-gray-900 p-10 shadow-lg rounded-lg">
         {/* Header */}
         <div className="text-center">
           <h1 className="text-4xl font-bold">Kanha Store</h1>

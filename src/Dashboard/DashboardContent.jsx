@@ -32,7 +32,7 @@ export default function DashboardContent() {
       </div>
 
       {/* Notifications */}
-      <div className="mt-8 bg-black p-5 rounded-xl shadow">
+      <div className="mt-8 bg-gray-100 p-5 rounded-xl shadow text-gray-900">
         <h2 className="font-bold mb-3">Notifications</h2>
 
         <ul className="space-y-2">
