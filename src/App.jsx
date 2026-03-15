@@ -1,7 +1,7 @@
 import "./App.css";
-import Dashboard from "./Dashboard/Dahboard";
+import Dashboard from "./Dashboard/Dashboard.jsx";
 import AllBills from "./pages/AllBills";
-import Bill from "./pages/Bill";
+// import Bill from "./pages/Bill";
 import BillSystem from "./pages/BillSystem";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./pages/Navbar";
