@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import {api} from "../api.js";
 
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const loadProducts = async () => {
-      const res = await axios.get("http://localhost:3000/api/items");
+      const res = await api.get("/api/items");
       console.log("got: ", res?.data)
       setProducts(res?.data?.products || []);
     };
@@ -14,7 +14,7 @@ export default function AllProducts() {
   }, []);
 
   const deleteProduct = async (id) => {
-    await axios.delete(`/api/products/${id}`);
+    await api.delete(`/api/products/${id}`);
     setProducts(products.filter((p) => p._id !== id));
   };
 

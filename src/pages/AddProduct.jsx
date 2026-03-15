@@ -1,7 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
+import {api} from "../api.js";
 import { useNavigate } from "react-router-dom";
-
 export default function AddProduct() {
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -34,7 +33,7 @@ export default function AddProduct() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("http://localhost:3000/api/product", formData);
+    const res = await api.post("/api/product", formData);
     console.log("done: ", res?.data);
     if (res?.data?.success) return navigate("/");
     alert("Product Added");

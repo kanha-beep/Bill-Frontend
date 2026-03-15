@@ -5,6 +5,7 @@ import DashboardContent from "./DashboardContent.jsx";
 import { InventoryReminder } from "./InventoryReminder.jsx";
 import { FaChartBar, FaGem, FaUsers, FaBell } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {api} from "../api.js"
 import axios from "axios";
 export default function Dashboard() {
   const [phone, setPhone] = useState(null);
@@ -20,7 +21,7 @@ export default function Dashboard() {
   });
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await axios.get("http://localhost:3000/api/items-dashboard");
+      const res = await api.get("/api/items-dashboard");
       setStats((p) => ({
         ...p,
         products: res?.data?.totalProducts,
@@ -35,7 +36,7 @@ export default function Dashboard() {
   const handleOTP = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/generate-otp", {
+      const res = await api.post("/generate-otp", {
         phone,
       });
       console.log("generate: ", res?.data?.otp);
@@ -64,7 +65,7 @@ export default function Dashboard() {
   };
   const handleVerifyOTP = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3000/verify-otp", {
+    const res = await api.post("/verify-otp", {
       verifyPhone,
       otp,
     });
